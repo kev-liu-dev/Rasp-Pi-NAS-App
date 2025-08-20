@@ -1,7 +1,9 @@
-# Group 51 Project
+# Raspberry Pi NAS App
 
 ## Project Overview
-This project is Network-Attached Storage (NAS) application that allows you to upload, download, manage, and organize files on a Raspberry Pi.
+This project is Network-Attached Storage (NAS) application created by my team of 4 that allows you to upload, download, manage, and organize files on a Raspberry Pi. 
+
+The API and doxygen comments files aren't included due to file size limits.
 
 ## Requirements
 
