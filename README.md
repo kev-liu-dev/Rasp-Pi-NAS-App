@@ -1,26 +1,46 @@
-# Raspberry Pi NAS App
+# LoginPage
 
-## Project Overview
-This project is Network-Attached Storage (NAS) application created by my team of 4 that allows you to upload, download, manage, and organize files on a Raspberry Pi. 
+This readme explains all the changes to the LoginPage files on March 29
 
-The API and doxygen comments files aren't included due to file size limits.
+## Changes to LoginWindow.cpp
 
-## Requirements
+Added <#include "api.h"> to include API functions header file.
 
-- QT Creator 6.0+
-- C++17 or higher
+Replaced these two functions:
+- on_loginButton_clicked(): the login button
+- on_retrieveButton_clicked(): the "retrieve password" button in the Forgot Password page
 
-## Running the Front End:
+Now they are integrated with the test.cpp API functions login and restore_password.
 
-1.  Open the project in Qt Creator (version 6.0 or later):
 
-2. Navigate to the Local Drive project directory.
 
-3.  Open the project file in Qt Creator.
+Also added two new functions: 
+- on_signupPageButton_clicked():
+  - The "Sign Up" Button on the login page that redirects user to sign up page
+- on_signupButton_clicked():
+  - The actual Sign Up button inside the Sign Up page that signs up user and switches to main program page if successful
 
-4.  Build and run the application:
+The signup button (signup_Button) is integrated with signup function from the API in test.cpp, and shows error if username is taken already.
 
-- Click the "Rebuild" button to compile the project.
 
-- Once built, click "Run" to launch the Local Drive app.
+## Changes to LoginWindow.h
 
+Added  these 3 headers:
+
+- void on_signupButton_clicked();
+- void on_signupPageButton_clicked(); 
+- void on_backButton_7_clicked(); - back button on signup page
+ 
+## Changes to LoginWindow.ui
+ - added a new page (page 5) that holds the signup page contents
+
+## Changes to LoginPage.pro: 
+- added "INCLUDEPATH += $$PWD/Headers" manually at the top
+- everything else changed automatically, such as the api.h file in the headers appeared when api.h was created
+
+## New files added:
+- api.cpp: the api functions from test.cpp for signup, login, restore password
+- api.h: api function headers
+- httplib.h: downloaded from cpp-httplib folder in API folder in group51 repo
+- ../json.hpp: downloaded from json folder in API folderin group51 repo
+- the last 2 files just make the api calls work

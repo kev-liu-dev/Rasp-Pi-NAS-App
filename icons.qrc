@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="avatar.png">images/avatar.png</file>
+        <file alias="pdf.png">images/pdf.png</file>
+        <file alias="word.png">images/word.png</file>
+        <file alias="excel.png">images/excel.png</file>
+        <file alias="ppt.png">images/ppt.png</file>
+        <file alias="image.png">images/image.png</file>
+        <file alias="music.png">images/music.png</file>
+        <file alias="video.png">images/video.png</file>
+        <file alias="txt.png">images/txt.png</file>
+        <file alias="file.png">images/file.png</file>
+        <file alias="doc.png">images/doc.png</file>
+        <file alias="random.png">images/random.png</file>
+    </qresource>
+</RCC>
